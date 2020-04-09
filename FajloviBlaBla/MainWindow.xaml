@@ -6,5 +6,18 @@
         xmlns:local="clr-namespace:FajloviBlaBla"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-	<TreeView Name="tv"/>
+	<DockPanel>
+
+		<UniformGrid Columns="2" DockPanel.Dock="Right">
+			<Label Content="Napravljen: "/>
+			<Label Name="lblNap"/>
+			<Label Content="Pristup: "/>
+			<Label Name="lblPri"/>
+			<Label Content="Ekstenzija: "/>
+			<Label Name="lblExt"/>
+			
+		</UniformGrid>
+
+		<TreeView Name="tv" DataContextChanged="RadiOvo" SelectedItemChanged="PromenaSelekcije"/>
+	</DockPanel>
 </Window>
